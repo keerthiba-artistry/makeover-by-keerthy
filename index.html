@@ -7,6 +7,64 @@
     <title>My Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Add custom styles here */
+        /* Example: */
+        .social-link {
+          transition: transform 0.3s ease-in-out;
+        }
+        .social-link:hover {
+          transform: scale(1.2);
+        }
+        @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    .flip-container {
+        perspective: 1000px;
+    }
+
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .front,
+    .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .front {
+        z-index: 2;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    /* Example styles for the content */
+    .content {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+    }
+      </style>
 </head>
 
 <body class="bg-black">
@@ -98,8 +156,6 @@
                             class="w-auto lg:w-auto lg:h-2/4 lg:mr-4 lg:mt-0 md:w-auto transition-transform duration-300 transform hover:scale-105">
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -176,122 +232,100 @@
     </section>
 
     <!-- Explore Section -->
-    <!-- <section class="bg-black" id="explore_us">
+    <section class="bg-black" id="explore_us">
         <div class="container mx-auto lg:py-20">
             <div class="py-10">
                 <h2 class="text-white text-3xl text-center">BLOG POSTS</h2>
                 <p class="text-yellow-400 text-center">READ MY LATEST POSTS</p>
             </div>
-            <div class="flex overflow-x-auto whitespace-no-wrap justify-center gap-4 relative">
-                <div class="work-content bg-opacity-75 bg-black p-4 rounded-lg shadow-md transition-transform hover:shadow-pink-lg hover:-translate-y-1 hover:scale-105 w-80 relative">
-                    <img src="image/kee_1st.jpg" alt="Work Image" class="h-96 w-80 rounded-lg hover:scale-105 hover:translate-y-1 hover:shadow-lg transition-all duration-300">
-                    <div class="popup hidden absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-75">
-                        <div class="work-content bg-opacity-75 bg-black p-4 rounded-lg shadow-md transition-transform w-80">
-                            <img src="image/kee_1st.jpg" alt="Work Image" class="h-96 w-80 rounded-lg">
-                            <h3 class="text-xl font-bold text-white mt-4">Friend Became a Client</h3>
-                            <p class="text-gray-300 mt-2">It's an absolute joy to welcome you as my client! Creating magical transformations and unforgettable memories. Your trust means the world to me, and I'm thrilled to enhance your natural beauty and confidence.</p>
-                        </div>
-                    </div>
+           
+        </div>      
+    </section>
+    
+    
+  
+
+
+
+    <div class="container mx-auto lg:py-20">
+        <div class="py-10">
+            <h2 class="text-white  text-3xl text-center">Founder Keerthiba's</h2>
+            <p class="text-yellow-400 text-center">Makeup Shots</p>
+        </div>
+    <div class="flex justify-center items-center my-8 bg-black" >
+        <div class="w-full md:w-3/4 lg:w-2/3 bg-white rounded-lg shadow-lg overflow-hidden relative">
+            <div class="md:flex">
+                <div class="md:w-1/3">
+                    <img src="image/Screenshot_20240408-164034.png" alt="Your Image" class="w-full h-auto md:h-full object-cover">
                 </div>
-                <!-- Add similar HTML for other cards -->
-                <div class="work-content bg-opacity-75 bg-black p-4 rounded-lg shadow-md transition-transform w-80 relative hidden">
-                    <img src="image/Screenshot_20240408-165720.png" alt="Work Image" class="h-96 w-80 rounded-lg hover:scale-105 hover:translate-y-1 hover:shadow-lg transition-all duration-300">
-                    <div class="popup hidden absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-75">
-                        <div class="work-content bg-opacity-75 bg-black p-4 rounded-lg shadow-md transition-transform w-80">
-                            <img src="image/Screenshot_20240408-165720.png" alt="Work Image" class="h-96 w-80 rounded-lg">
-                            <h3 class="text-xl font-bold text-white mt-4">Nail Art with Friend</h3>
-                            <p class="text-gray-300 mt-2">Transforming fingertips into works of art, our bridal nail art exudes elegance and sophistication, touch of glamour to every bride's special day. Nail art designs are tailored to complement the bride's style, enhancing her beauty.</p>
+                <div class="md:w-2/3 p-6 md:p-8">
+                    <h2 class="text-2xl font-bold mb-4">About Me</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        "<strong class="text-pink-600">Keerthy</strong> is a versatile professional, skilled in makeup artistry, hairstyling, and nail care. With expertise in bridal transformations, everyday elegance, and party glamour, she brings out the best in her clients. Not only is she a skincare specialist, but she also offers her own line of lash extensions and curling products. Moreover, Keerthy has introduced her exclusive collection of eyeshadow palettes, makeup brushes, foundation, and nail polish sets. Her commitment to excellence and passion for beauty shine through in every aspect of her work."
+                        <div class="flex justify-center items-center space-x-6 mt-11">
+                            <a href="your_whatsapp_url" class="social-icon inline-block animate-bounce">
+                                <img src="image/whatsapp.png" alt="WhatsApp" class="h-10 w-10">
+                            </a>
+                            <a href="your_instagram_url" class="social-icon inline-block animate-bounce">
+                                <img src="image/instagram.png" alt="Instagram" class="h-10 w-10">
+                            </a>
+                            <a href="your_youtube_url" class="social-icon inline-block animate-bounce">
+                                <img src="image/youtube.png" alt="YouTube" class="h-10 w-10">
+                            </a>
+                            <a href="your_gmail_url" class="social-icon inline-block animate-bounce">
+                                <img src="image/gmail.png" alt="Gmail" class="h-10 w-10">
+                            </a>
                         </div>
-                    </div>
-                </div> 
-                <div class="work-content bg-opacity-75 bg-black p-4 rounded-lg shadow-md transition-transform w-80 relative hidden">
-                    <img src="image/Screenshot_20240408-165829.png" alt="Work Image" class="h-96 w-80 rounded-lg hover:scale-105 hover:translate-y-1 hover:shadow-lg transition-all duration-300">
-                    <div class="popup hidden absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-75">
-                        <div class="work-content bg-opacity-75 bg-black p-4 rounded-lg shadow-md transition-transform w-80">
-                            <img src="image/Screenshot_20240408-165829.png" alt="Work Image" class="h-96 w-80 rounded-lg">
-                            <h3 class="text-xl font-bold text-white mt-4">First Client Best Memories</h3>
-                            <p class="text-gray-300 mt-2">Embarking on this journey together as your makeup artist for your special day fills me with excitement and gratitude. Your trust in my craft is truly cherished, and I'm committed to making your first experience with my makeup services a memorable and beautiful one.</p>
-                        </div>
-                    </div>
-                </div> 
+                        <p class="mt-4 text-gray-500">- Click In Touch</p>
+                    </p>
+                </div>
+                
+                
+                
+            </div>
+            <!-- Special hover effect overlay -->
+            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 flex justify-center items-center transition-opacity duration-300">
+                <p class="text-white text-lg font-bold"></p>
             </div>
         </div>
-    </section>
-  
-     <section class="">
-        <div class="container mx-auto">
-            <div class="explore_head text-center ">
-                <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">About Me</h2>
-                <p class="text-yellow-400 text-sm lg:text-lg">Latest Update on Media</p>
-            </div>
-                <div class="flex justify-center items-center mt-3 p-3" >
-                    <div class="w-full md:w-4/4 lg:w-3/3 bg-white rounded-lg shadow-lg overflow-hidden relative">
-                        <div class="md:flex">
-                            <div class="md:w-1/3">
-                                <img src="image/Screenshot_20240408-164034.png" alt="Your Image" class="w-full h-auto md:h-full object-cover">
-                            </div>
-                            <div class="md:w-2/3 p-6 md:p-8">
-                                 <!-- <h2 class="text-2xl font-bold mb-4">About Me</h2>  -->
-                                <p class="text-gray-700 leading-relaxed lg:text-lg">
-                                    "<strong class="text-pink-700">Keerthy</strong> is a versatile professional, skilled in makeup artistry, hairstyling, and nail care. With expertise in bridal transformations, everyday elegance, and party glamour, she brings out the best in her clients. Not only is she a skincare specialist, but she also offers her own line of lash extensions and curling products. Moreover, Keerthy has introduced her exclusive collection of eyeshadow palettes, makeup brushes, foundation, and nail polish sets. Her commitment to excellence and passion for beauty shine through in every aspect of her work."
-                                    <div class="flex justify-center items-center space-x-6 mt-11">
-                                        <a href="https://whatsapp.com/channel/0029Va71EPf9Bb5pP3xkfZ0X" class="social-icon inline-block transition-transform duration-300 transform hover:scale-110">
-                                            <img src="image/whatsapp.png" alt="WhatsApp" class="h-10 w-10 ">
-                                        </a>
-                                        <a href="https://www.instagram.com/makeover_by__keerthy?igsh=MWJjendzdzVoZmJwYw=="  class="social-icon inline-block transition-transform duration-300 transform hover:scale-110">
-                                            <img src="image/instagram.png" alt="Instagram" class="h-10 w-10">
-                                        </a>
-                                        <a href="https://www.youtube.com/@keeks_09?fbclid=PAZXh0bgNhZW0CMTEAAaaq48EzgHbkLL3d2Es3K5vMmZEiQ3-GNWpNdEl2jaAdk2bPB4BZifLy9jI_aem_Aayvl1MBuydXQJB90Ct5z_EDNtKtftVcRQq-FQ41p7xzv9_CmMlakTZyIkvsMepeHmsBXTMN85DYfywj04Xh0mjR" class="social-icon inline-block transition-transform duration-300 transform hover:scale-110">
-                                            <img src="image/youtube.png" alt="YouTube" class="h-10 w-10">
-                                        </a>
-                                        <a href="your_gmail_url" class="social-icon inline-block transition-transform duration-300 transform hover:scale-110">
-                                            <img src="image/gmail.png" alt="Gmail" class="h-10 w-10">
-                                        </a>
-                                    </div>
-                                    <p class="mt-4 text-gray-500">- Get In Touch</p>
-                                </div>
-                            
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                </section> 
-    <!-- Special hover effect overlay -->
-    <section class="py-10">
-            
-                <div class="max-w-7xl mx-auto p-3">
-                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2"> 
-    <!-- Rating 1 -->
-     <div class="relative bg-white overflow-hidden shadow rounded-lg p-6 transition duration-300 hover:shadow-lg hover:-translate-x-4">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white mb-4">
-                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-900">Times of India</h3>
-                            <p class="mt-2 text-gray-600">
-                                "When beauty becomes an artistry, then your day blossoms with even more radiance."
-                            </p>
-                            <p class="mt-4 text-gray-500">- Vijay</p>
-                        </div> 
-
-    <!-- Rating 2 -->
-     <div class="relative bg-white overflow-hidden shadow rounded-lg p-6 transition duration-300 hover:shadow-lg hover:translate-x-4">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white mb-4">
-                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-900">Hindustan Times</h3>
-                            <p class="mt-2 text-gray-600">
-                                "Beauty is an ART she is a Artist. Makeup is malleable and mercurial: The biggest joy I have every day is the opportunity to create, to play, and to invent with something I’ve loved forever" 
-                            </p>
-                            <p class="mt-4 text-gray-500">- Kee</p>
-                        </div>
-                        
-                    </div>
+</div>
+<div class="bg-black py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <!-- Rating 1 -->
+            <div class="relative bg-white overflow-hidden shadow rounded-lg p-6 transition duration-300 hover:shadow-lg hover:-translate-x-4">
+                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white mb-4">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
                 </div>
-        </section>
+                <h3 class="text-xl font-semibold text-gray-900">Times of India</h3>
+                <p class="mt-2 text-gray-600">
+                    "When beauty becomes an artistry, then your day blossoms with even more radiance."
+                </p>
+                <p class="mt-4 text-gray-500">-Hardik</p>
+            </div>
+            
+            <!-- Rating 2 -->
+            <div class="relative bg-white overflow-hidden shadow rounded-lg p-6 transition duration-300 hover:shadow-lg hover:translate-x-4">
+                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white mb-4">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">Hindustan Times</h3>
+                <p class="mt-2 text-gray-600">
+                    "Beauty is an ART she is a Artist. Makeup is malleable and mercurial: The biggest joy I have every day is the opportunity to create, to play, and to invent with something I’ve loved forever" 
+                </p>
+                <p class="mt-4 text-gray-500">- Ro</p>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+</section>
+
 
     <!-- Booking Page -->
     <section id="booking_us"> 
@@ -306,10 +340,9 @@
     </div> 
     
     <!-- Form Content -->
-    <div class="container justify-center items-center z-10 relative flex py-5">
+    <div class="container justify-start items-start z-10 relative flex py-5 p-8 ">
         <div class="form-container  bg-gray-400 bg-opacity-80 border border-gray-400 rounded-lg shadow-md">
-            <!-- <p class="text-white text-3xl font-bold mb-6">Book Us :</p>  -->
-            <form action="#" method="POST" class="form p-2">
+            <form action="send_email.php" method="POST" class="form p-8">
                 <div class="input-group flex flex-col mt-2 gap-2">
                     <div class="w-full ">
                         <label for="name" class="text-white">Name:</label>
@@ -334,56 +367,86 @@
                     <label for="message" class="text-white">Message:</label>
                     <textarea id="message" name="message" class="w-full py-2 px-4 rounded bg-white bg-opacity-50 focus:bg-opacity-80 focus:outline-none"></textarea>
                 </div>
-                <div class="form_btn flex justify-end mt-4">
+                <div class="form_btn flex justify-end mt-4 ">
                     <button type="submit" class="book_btn bg-pink-500 text-white rounded-full py-1 px-8 mr-2 top-6 transition duration-300 hover:bg-white hover:text-pink-500">Book Now</button>
-                    <button type="button" class="reset_btn bg-indigo-600 text-white rounded-full py-2 px-6 transition duration-300 hover:bg-white hover:text-indigo-600">Reset</button>
+                    <button type="reset" class="reset_btn bg-indigo-600 text-white rounded-full py-2 px-6 transition duration-300 hover:bg-white hover:text-indigo-600">Reset</button>
                 </div>
             </form>
         </div>
     </div>
+    
 </div>
 </section>
 
 
 
     <!-- Contact US -->
-    <section id="contact_us">
-            <div class="container mx-auto py-10 px-4">
-                <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center">Contact Us</h2>
+    <section id="contact_us" class="bg-gray-900 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">Contact Us</h2>
             <div class="max-w-lg mx-auto">
                 <div class="bg-black rounded-lg shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-                  <p class="text-white mt-3">Get in touch with us for any inquiries or collaborations.</p>
-                  <form class="">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    <div class="">
-                      <label class="text-white" for="name">Name</label>
-                      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
-                    </div>
-                    <div class="">
-                      <label class="text-white" for="phone">Phone</label>
-                      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Your Phone Number">
-                    </div>
-                    <div class="">
-                      <label class="text-white" for="email">Email</label>
-                      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
-                    </div>
+                    <p class="text-white mt-3 px-4 py-2">Get in touch with us for any inquiries or collaborations.</p>
+                    <form id="contactForm" class="px-4 pb-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label class="text-white" for="name">Name</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label class="text-white" for="phone">Phone</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" name="phone" type="tel" placeholder="Your Phone Number" required>
+                            </div>
+                            <div>
+                                <label class="text-white" for="email">Email</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label class="text-white" for="message">Message</label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                    
+                        <button id="submitButton" class="bg-pink-500 hover:bg-pink-600 text-white font-bold mt-6 rounded-full py-2 px-8 transition-all duration-300 transform hover:scale-105" type="submit">Submit</button>
+                    </form>
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-pink-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 bg-pink-500 opacity-0 hover:opacity-25 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 border-4 border-pink-500 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                    <div class="mt-4">
-                      <label class="text-white" for="message">Message</label>
-                      <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Message"></textarea>
-                    </div>
-                
-                    <button class="bg-pink-500 hover:bg-pink-600 text-white font-bold mt-3 rounded transition-all duration-300" type="submit">Submit</button>
-                  </form>
-                  <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-pink-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                  <div class="absolute inset-0 bg-pink-500 opacity-0 hover:opacity-25 transition-opacity duration-300"></div>
-                  <div class="absolute inset-0 border-4 border-pink-500 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+        <section class="bg-black py-10">
+            <div class="container mx-auto">
+              <h1 class="text-3xl font-bold mb-8">Get In Touch</h1>
+              <!-- Social Media Links -->
+                        <div class="flex justify-center items-center space-x-6 mt-11">
+                <a href="error.html" target="_blank" class="social-link">
+                <img src="image/playstore.png" alt="YouTube" class="h-10 w-10">
+                </a>
+                <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="social-link">
+                <img src="image/whatsapp.png" alt="WhatsApp" class="h-10 w-10">
+                </a>
+                <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-link">
+                <img src="image/instagram.png" alt="Instagram" class="h-10 w-10">
+                </a>
+                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" class="social-link">
+                <img src="image/youtube.png" alt="YouTube" class="h-10 w-10">
+                </a>
               </div>
             </div>
-              
-        </section>
+          </section>
         
+<footer class="bg-black text-white py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; Copyright 2024 <stronng>Keerthiba Artistry</stronng></p>
+        <p> All rights reserved.</p>
+    </div>
+</footer>
 
     <script>
         // JavaScript to toggle mobile menu
