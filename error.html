@@ -41,6 +41,15 @@
         .text-rose {
         color: #ff007f; /* Set the color to rose */
     }
+    @keyframes jump {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .social-icon img {
+      animation: jump 0.5s infinite;
+    }
     </style>
 </head>
 <body> 
@@ -50,28 +59,22 @@
             <h2 class="text-2xl font-bold mb-4 text-white mt-10">Keerthiba Artistry <span class="text-rose">Mobile App</span> Getting Ready</h2>
             <h2 class="text-2xl font-bold mb-4 text-white mt-4">Stay tuned & Get In Touch</h2>
 
-            <div class="grid grid-cols-3 gap-4  h-screen flex items-center justify-center">
-                
+            <div class="grid grid-cols-3 gap-4 h-screen flex items-center justify-center">
                 <!-- Facebook -->
                 <a href="#" class="social-icon transition duration-300 ease-in-out transform hover:scale-110 flex items-center justify-center rounded-full h-12 w-12">
-                    <img src="image/whatsapp1.png" alt="Instagram" class="h-10 w-10">
-
+                  <img src="image/whatsapp1.png" alt="WhatsApp" class="h-10 w-10">
                 </a>
-
+            
                 <!-- Twitter -->
                 <a href="#" class="social-icon  transition duration-300 ease-in-out transform hover:scale-110 flex items-center justify-center rounded-full h-12 w-12">
-                    <img src="image/instagram1.png" alt="Instagram" class="h-10 w-10">
-
-                    
+                  <img src="image/instagram1.png" alt="Instagram" class="h-10 w-10">
                 </a>
-
+            
                 <!-- Instagram -->
                 <a href="#" class="social-icon transition duration-300 ease-in-out transform hover:scale-110 flex items-center justify-center rounded-full h-12 w-12">
-                    <img src="image/youtube1.png" alt="Instagram" class="h-10 w-10">
-
+                  <img src="image/youtube1.png" alt="YouTube" class="h-10 w-10">
                 </a>
-      
-            </div>
+              </div>
                     
     </section>
         </div>
