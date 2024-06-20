@@ -694,7 +694,17 @@
                 });
             });
         });
-
+ // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+        if (
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // I, J
+            (e.ctrlKey && e.keyCode === 85) || // U
+            (e.keyCode === 123) || // F12
+            (e.ctrlKey && e.keyCode === 83) // S
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
 
 
 
