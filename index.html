@@ -695,16 +695,23 @@
             });
         });
  // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
-        if (
-            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // I, J
-            (e.ctrlKey && e.keyCode === 85) || // U
-            (e.keyCode === 123) || // F12
-            (e.ctrlKey && e.keyCode === 83) // S
-        ) {
+   // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Disable specific key combinations
+    document.addEventListener('keydown', function(e) {
+        // Disable F12
+        if (e.key === "F12") {
             e.preventDefault();
-            return false;
-        }
-    });
+        }
+        // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+        if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
+            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
+            e.preventDefault();
+        }
+    });
 
 
 
