@@ -695,13 +695,8 @@
             });
         });
  // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
-   // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-
-    // Disable specific key combinations
-    document.addEventListener('keydown', function(e) {
+   // Function to disable key combinations
+    function disableKeyCombinations(e) {
         // Disable F12
         if (e.key === "F12") {
             e.preventDefault();
@@ -711,7 +706,23 @@
             (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
             e.preventDefault();
         }
-    });
+    }
+
+    // Function to disable right-click context menu
+    function disableContextMenu(e) {
+        e.preventDefault();
+    }
+
+    // Event listeners
+    document.addEventListener('keydown', disableKeyCombinations);
+    document.addEventListener('contextmenu', disableContextMenu);
+
+    // Additional measures to disable Ctrl+U
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && e.key === 'u') {
+            return false;
+        }
+    };
 
 
 
