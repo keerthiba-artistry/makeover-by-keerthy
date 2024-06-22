@@ -109,17 +109,27 @@
         #closeMobileMenuBtn {
             z-index: 10;
         }
+
+        /* Prevent from screenshot */
+        body {
+            -webkit-user-select: none;
+            /* Disable text selection */
+            -webkit-touch-callout: none;
+            /* Disable callouts */
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
     </style>
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0J8KJ7000"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-P0J8KJ7000');
+    gtag('config', 'G-P0J8KJ7000');
 </script>
 
 <body class="bg-black">
@@ -342,7 +352,8 @@
         </div>
     </section>
 
-<!-- Aboot Me -->
+    <!-- Aboot Me -->
+
     <section id="about-me">
         <div class="container mx-auto lg:py-10">
             <div class="py-10">
@@ -445,21 +456,27 @@
                     <h2 class="text-white  text-3xl text-center">Popular Strikes</h2>
                     <p class="text-yellow-400 text-center">Client's</p>
                 </div>
-                    <!-- <p class="mt-2 text-xl leading-8 font-extrabold tracking-tight text-pink-400">
+                <!-- <p class="mt-2 text-xl leading-8 font-extrabold tracking-tight text-pink-400">
                     Recent Projects
                 </p> -->
             </div>
-    
+
             <!-- Animated grid for works -->
             <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Work item 1 -->
                 <div class="relative overflow-hidden group">
-                    <img src="image/Screenshot_20240408-165829.png" alt="Work 1" class="w-full h-64 object-cover rounded-lg transition duration-500 transform group-hover:scale-110">
-                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-50 transition duration-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <img src="image/Screenshot_20240408-165829.png" alt="Work 1"
+                        class="w-full h-64 object-cover rounded-lg transition duration-500 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-50 transition duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                         <div class="text-center mt-40">
                             <h3 class="text-lg font-semibold text-white">Hardio</h3>
-                            <p class="mt-2 text-gray-300">In the world of weddings, every bride seeks to create a moment of unparalleled beauty and unforgettable elegance. Enter Bridal Hardio, a revolutionary concept in bridal fashion that combines tradition with cutting-edge design to offer brides the ultimate in wedding day attire and accessories.</p>
+                            <p class="mt-2 text-gray-300">In the world of weddings, every bride seeks to create a moment
+                                of unparalleled beauty and unforgettable elegance. Enter Bridal Hardio, a revolutionary
+                                concept in bridal fashion that combines tradition with cutting-edge design to offer
+                                brides the ultimate in wedding day attire and accessories.</p>
                             <div class="mt-4">
                                 <span class="text-indigo-600 inline-flex items-center">
                                     <!-- Icon for client, e.g., avatar or logo -->
@@ -472,12 +489,18 @@
                 </div>
                 <!-- Repeat for other work items -->
                 <div class="relative overflow-hidden group">
-                    <img src="image/henna-mehendi-design-hindu-bride_784394-5.avif" alt="Work 1" class="w-full h-64 object-cover rounded-lg transition duration-500 transform group-hover:scale-110">
-                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-50 transition duration-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <img src="image/henna-mehendi-design-hindu-bride_784394-5.avif" alt="Work 1"
+                        class="w-full h-64 object-cover rounded-lg transition duration-500 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-50 transition duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                         <div class="text-center mt-40">
                             <h3 class="text-lg font-semibold text-white">Mehandi</h3>
-                            <p class="mt-2 text-gray-300">Mehndi, an integral part of weddings in many cultures, adds a touch of artistry and symbolism to the bridal ensemble. Applied in elaborate patterns on the bride's hands and feet, Mehndi not only signifies auspiciousness and blessings but also serves as a form of self-expression and celebration.</p>
+                            <p class="mt-2 text-gray-300">Mehndi, an integral part of weddings in many cultures, adds a
+                                touch of artistry and symbolism to the bridal ensemble. Applied in elaborate patterns on
+                                the bride's hands and feet, Mehndi not only signifies auspiciousness and blessings but
+                                also serves as a form of self-expression and celebration.</p>
                             <div class="mt-4">
                                 <span class="text-indigo-600 inline-flex items-center">
                                     <!-- Icon for client, e.g., avatar or logo -->
@@ -490,12 +513,18 @@
                 </div>
 
                 <div class="relative overflow-hidden group">
-                    <img src="image/Home_img.JPG" alt="Work 1" class="w-full h-64 object-cover rounded-lg transition duration-500 transform group-hover:scale-110">
-                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-50 transition duration-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <img src="image/Home_img.JPG" alt="Work 1"
+                        class="w-full h-64 object-cover rounded-lg transition duration-500 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-50 transition duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                         <div class="text-center mt-40">
                             <h3 class="text-lg font-semibold text-white">Photo Shoot</h3>
-                            <p class="mt-2 text-gray-300">Makeup photoshoots are a celebration of artistry and beauty captured through the lens of a camera. Whether it’s for editorial spreads, portfolio building, or personal memories, these sessions highlight the transformative power of makeup and its ability to enhance natural features</p>
+                            <p class="mt-2 text-gray-300">Makeup photoshoots are a celebration of artistry and beauty
+                                captured through the lens of a camera. Whether it’s for editorial spreads, portfolio
+                                building, or personal memories, these sessions highlight the transformative power of
+                                makeup and its ability to enhance natural features</p>
                             <div class="mt-4">
                                 <span class="text-indigo-600 inline-flex items-center">
                                     <!-- Icon for client, e.g., avatar or logo -->
@@ -509,7 +538,7 @@
             </div>
         </div>
     </section>
-    
+
 
 
     <!-- Booking Page -->
@@ -528,7 +557,8 @@
         </div>
         <div class="container mx-auto px-4 relative z-10 flex justify-center items-center h-full">
             <!-- Form Content -->
-            <div class="form-container bg-gray-400 bg-opacity-80 border border-gray-400 rounded-lg shadow-md p-8 w-full md:max-w-md mt-4">
+            <div
+                class="form-container bg-gray-400 bg-opacity-80 border border-gray-400 rounded-lg shadow-md p-8 w-full md:max-w-md mt-4">
                 <form action="https://formspree.io/f/xoqgyrqk" method="POST" class="form">
                     <div class="input-group flex flex-col md:flex-row md:flex-wrap gap-2">
                         <div class="w-full md:w-1/2">
@@ -582,12 +612,12 @@
             </div>
         </div>
     </section>
-    
 
 
 
-  
-    
+
+
+
 
     <section class="bg-black py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -595,7 +625,7 @@
                 <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center">Contact Us</h2>
                 <p class="text-yellow-400 text-sm lg:text-lg text-center">Get In Touch</p>
             </div>
-    
+
             <!-- Contact Form -->
             <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
                 <div class="relative">
@@ -630,7 +660,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <footer class="bg-black text-white py-6">
         <div class="container mx-auto text-center">
@@ -695,40 +725,81 @@
                 });
             });
         });
- // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
-   // Function to disable key combinations
-    function disableKeyCombinations(e) {
-        // Disable F12
-        if (e.key === "F12") {
+        // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+        // Function to disable key combinations
+        function disableKeyCombinations(e) {
+            // Disable F12
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+            // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+            if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+                (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
+                e.preventDefault();
+            }
+        }
+
+        // Function to disable right-click context menu
+        function disableContextMenu(e) {
             e.preventDefault();
         }
-        // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
-        if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
-            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
-            e.preventDefault();
+
+        // Event listeners
+        document.addEventListener('keydown', disableKeyCombinations);
+        document.addEventListener('contextmenu', disableContextMenu);
+
+        // Additional measures to disable Ctrl+U
+        document.onkeydown = function (e) {
+            if (e.ctrlKey && e.key === 'u') {
+                return false;
+            }
+        };
+
+
+        // Prevent from screenshot
+        // Prevent PrintScreen key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'PrintScreen' || event.key === 'F12') {
+                alert('Screenshots are disabled on this page.');
+                event.preventDefault();
+            }
+        });
+
+        document.addEventListener('keyup', function (event) {
+            if (event.key === 'PrintScreen') {
+                navigator.clipboard.writeText('Screenshots are disabled on this page.').then(function () {
+                    alert('Screenshots are disabled on this page.');
+                }, function () {
+                    alert('Screenshots are disabled on this page.');
+                });
+            }
+        });
+
+        // Prevent common screen recording
+        setInterval(() => {
+            try {
+                if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+                    alert('Screen recording is disabled on this page.');
+                    window.close();
+                }
+            } catch (e) { }
+        }, 1000);
+
+        // Detect mobile screenshot and screen recording
+        function detectScreenCapture() {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                alert('Screenshots and screen recordings are disabled on this page.');
+                document.body.innerHTML = '<h1>Screenshots and screen recordings are disabled on this page.</h1>';
+            }
         }
-    }
 
-    // Function to disable right-click context menu
-    function disableContextMenu(e) {
-        e.preventDefault();
-    }
+        // Disable context menu to prevent right-click actions
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
 
-    // Event listeners
-    document.addEventListener('keydown', disableKeyCombinations);
-    document.addEventListener('contextmenu', disableContextMenu);
-
-    // Additional measures to disable Ctrl+U
-    document.onkeydown = function(e) {
-        if (e.ctrlKey && e.key === 'u') {
-            return false;
-        }
-    };
-
-
-
-
-
+        window.onload = detectScreenCapture;
         //booking
 
     </script>
