@@ -109,6 +109,11 @@
         #closeMobileMenuBtn {
             z-index: 10;
         }
+          /* Prevent text selection */
+          body {
+            user-select: none;
+        }
+        /* Overlay to discourage screenshots */
     </style>
 </head>
 
@@ -744,6 +749,71 @@
                 return false;
             }
         };
+
+
+
+        // 
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Disable common screenshot key combinations on desktop
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'PrintScreen' || 
+            (e.key === 'p' && e.ctrlKey && e.shiftKey) || 
+            (e.key === 'S' && e.ctrlKey && e.shiftKey) || 
+            (e.key === 'I' && e.ctrlKey && e.shiftKey) || 
+            (e.key === 'J' && e.ctrlKey && e.shiftKey) || 
+            (e.key === 'U' && e.ctrlKey)) {
+            alert('Screenshots are not allowed!');
+            e.preventDefault();
+        }
+        // Handle Windows key combinations
+        if (e.key === 'Meta' && (e.code === 'KeyS' || e.code === 'KeyG' || e.code === 'KeyH' || e.code === 'KeyR')) {
+            // alert('Screenshots are not allowed!');
+            e.preventDefault();
+        }
+        // Handle PrintScreen button press
+        if (e.key === 'PrintScreen') {
+            // alert('Screenshots are not allowed!');
+            navigator.clipboard.writeText('Screenshots are not allowed!');
+            e.preventDefault();
+        }
+    });
+
+    // Detect PrintScreen key press
+    document.addEventListener('keyup', function(e) {
+        if (e.key === 'PrintScreen') {
+            alert('Screenshots are not allowed!');
+            navigator.clipboard.writeText('');
+        }
+    });
+
+    // Mobile and tablet specific
+    // Detect screen recording using visibility change
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') {
+            // alert('Screen recording is not allowed!');
+        }
+    });
+
+    // Detect screenshot attempts using resize event (for virtual keyboard or screen resizing)
+    window.addEventListener('resize', function() {
+        // alert('Screen recording or screenshot is not allowed!');
+    });
+
+    // Prevent screenshots using a visible overlay on mobile (not foolproof)
+    const preventScreenshotOverlay = document.createElement('div');
+    preventScreenshotOverlay.style.position = 'fixed';
+    preventScreenshotOverlay.style.top = '0';
+    preventScreenshotOverlay.style.left = '0';
+    preventScreenshotOverlay.style.width = '100%';
+    preventScreenshotOverlay.style.height = '100%';
+    preventScreenshotOverlay.style.backgroundColor = 'rgba(255, 255, 255, 0.001)';
+    preventScreenshotOverlay.style.zIndex = '9999';
+    preventScreenshotOverlay.style.pointerEvents = 'none';
+    document.body.appendChild(preventScreenshotOverlay);
 
         //booking
 
