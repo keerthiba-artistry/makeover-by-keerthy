@@ -109,16 +109,6 @@
         #closeMobileMenuBtn {
             z-index: 10;
         }
-
-        /* Prevent from screenshot */
-        body {
-            -webkit-user-select: none;
-            /* Disable text selection */
-            -webkit-touch-callout: none;
-            /* Disable callouts */
-            -webkit-tap-highlight-color: transparent;
-            user-select: none;
-        }
     </style>
 </head>
 
@@ -756,44 +746,7 @@
         };
 
 
-        // Prevent from screenshot
-        // Prevent PrintScreen key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'PrintScreen' || event.key === 'F12') {
-                alert('Screenshots are disabled on this page.');
-                event.preventDefault();
-            }
-        });
-
-        document.addEventListener('keyup', function (event) {
-            if (event.key === 'PrintScreen') {
-                navigator.clipboard.writeText('Screenshots are disabled on this page.').then(function () {
-                    alert('Screenshots are disabled on this page.');
-                }, function () {
-                    alert('Screenshots are disabled on this page.');
-                });
-            }
-        });
-
-        // Prevent common screen recording
-        setInterval(() => {
-            try {
-                if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
-                    alert('Screen recording is disabled on this page.');
-                    window.close();
-                }
-            } catch (e) { }
-        }, 1000);
-
-        // Detect mobile screenshot and screen recording
-        function detectScreenCapture() {
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            if (isMobile) {
-                alert('Screenshots and screen recordings are disabled on this page.');
-                document.body.innerHTML = '<h1>Screenshots and screen recordings are disabled on this page.</h1>';
-            }
-        }
-
+       
         // Disable context menu to prevent right-click actions
         document.addEventListener('contextmenu', function (event) {
             event.preventDefault();
