@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .image-hover:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            background-color: #f3f4f6;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-black font-sans leading-normal tracking-normal">
+  <div class="flex justify-center items-center">
+    <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+    <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
+      <!-- Heading Section -->
+    <div class="text-center">
+      <h2 class="text-white text-3xl font-bold">Blog</h2>
+      <p class="text-yellow-400">Explore The World of Keerthi</p>
+  </div>
+
+      <div class="lg:flex items-stretch md:mt-12 mt-8">
+        <div class="lg:w-1/2">
+          <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
+            <div class="sm:w-1/2 relative">
+              <div>
+                <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">09 Sep 2023</p>
+                <div class="absolute bottom-0 left-0 p-6">
+                  <h2 class="text-xl font-semibold 5 text-white">Art of Saree Draping with Elegance Redefined</h2>
+                  <p class="text-base leading-4 text-white mt-2">Discover the Timeless Beauty of Saree Draping</p>
+                  <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                    <p onclick="window.location.href='404.html'"   class="pr-2 text-sm font-medium leading-none">Read More</p>
+                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="https://img.freepik.com/premium-photo/traditional-stylish-indian-dress-with-unique-embroidery-design-presenting-fashion-with-culture_919955-21146.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" class="w-full" alt="chair" />
+            </div>
+            <div class="sm:w-1/2 sm:mt-0 mt-4 relative">
+              <div>
+                <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">09 Sep 2023</p>
+                <div class="absolute bottom-0 left-0 p-6">
+                  <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                  <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                  <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="https://img.freepik.com/premium-photo/christmas-decorative-make-up-cosmetics_82893-19776.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" class="w-full" alt="wall design" />
+            </div>
+          </div>
+          <div class="relative">
+            <div>
+              <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">09 Sep 2024</p>
+              <div class="absolute bottom-0 left-0 md:p-10 p-6">
+                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                  <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                  <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img src="image/Home_img.JPG" alt="sitting place" class="w-full mt-8 md:mt-6 hidden sm:block" />
+            <!-- <img class="w-full mt-4 sm:hidden" src="https://i.ibb.co/6XYbN7f/Rectangle-29.png" alt="sitting place" /> -->
+          </div>
+        </div>
+        <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between">
+          <div class="relative">
+            <div>
+              <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April 2021</p>
+              <div class="absolute bottom-0 left-0 md:p-10 p-6">
+                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                  <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                  <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img src="https://i.ibb.co/6Wfjf2w/img-4.png" alt="sitting place" class="w-full sm:block hidden" />
+            <img class="w-full sm:hidden" src="https://img.freepik.com/premium-photo/traditional-stylish-indian-dress-with-unique-embroidery-design-presenting-fashion-with-culture_919955-21146.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" alt="sitting place" />
+          </div>
+          <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
+            <div class="relative w-full">
+              <div>
+                <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April 2021</p>
+                <div class="absolute bottom-0 left-0 p-6">
+                  <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                  <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                  <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="image/First Client.png" class="w-full" alt="chair" />
+            </div>
+            <div class="relative w-full sm:mt-0 mt-4">
+              <div>
+                <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April 2021</p>
+                <div class="absolute bottom-0 left-0 p-6">
+                  <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                  <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                  <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="https://img.freepik.com/free-photo/authentic-indian-wedding-bracelets-colored-hands-by-henna_8353-9770.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" class="w-full" alt="wall design" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
