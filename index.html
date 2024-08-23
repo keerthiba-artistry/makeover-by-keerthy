@@ -33,7 +33,7 @@
 
 
 
-    <style>
+   <style>
         /* Add custom styles here */
         /* Example: */
         .social-link {
@@ -96,35 +96,74 @@
             }
         }
 
-        .nav-link {
-            position: relative;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
-            font-size: 18px;
-        }
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #df2170;
+}
 
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 100px;
-            width: 0;
-            height: 2px;
-            background-color: #fc035a;
-            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-            transform: translateX(-50%);
-        }
 
-        .nav-link:hover::before {
-            width: 100%;
-            left: 50%;
-        }
-
-        .nav-link:hover {
-            color: #fc035a;
-            transform: translateY(-3px);
-        }
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+        /* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #df2170;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+     
 
         #mobileMenu {
             z-index: 9;
@@ -133,23 +172,32 @@
         #closeMobileMenuBtn {
             z-index: 10;
         }
+
+        .image-hover:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            background-color: #f3f4f6;
+            transition: background-color 0.3s ease-in-out;
+        }
     </style>
 </head>
 
 
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NRL234N1X"></script>
+<!-- Google tag (gtag.js) for UIT-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0J8KJ7000"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-2NRL234N1X');
+    gtag('config', 'G-P0J8KJ7000');
 </script>
+<!-- Google Tag for Live -->
+ <!-- Google tag (gtag.js) -->
 
-    <!-- Google Tag for Live -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0P2W4VZFN"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0P2W4VZFN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -157,7 +205,7 @@
 
   gtag('config', 'G-H0P2W4VZFN');
 </script>
- -->
+
 <body class="bg-black">
     <header class="text-center  fixed w-full z-30 bg-gray-700">
         <div class="container mx-auto flex justify-between items-center px-4">
@@ -186,7 +234,7 @@
                     <li><a href="#relative" class="block py-4 hover:text-pink-700 nav-link">Home</a></li>
                     <li><a href="#about_us" class="block py-4 hover:text-pink-700 nav-link">About</a></li>
                     <li><a href="#booking_us" class="block py-4 hover:text-pink-700 nav-link">Booking</a></li>
-                    <li><a onclick="window.location.href='blog.html'" class="block py-4 hover:text-pink-700 nav-link">Blog</a></li>
+                    <li><a href="#Blog" class="block py-4 hover:text-pink-700 nav-link">Blog</a></li>
                     <li><a href="#contact_us" class="block py-4 hover:text-pink-700 nav-link">Contact Us</a></li>
                     <li><button onclick="scrollToSection('about-me')" title="Get in Touch with Keerthiba Artistry " aria-label="Get In Touch"
                             class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded transition-all duration-300">Get
@@ -197,8 +245,8 @@
 
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:hidden lg:block xl:block">
-                <ul class="flex gap-4 sm:gap-16">
+            <nav class="hidden md:hidden lg:block xl:block stroke">
+                <ul class="flex gap-4 sm:gap-16 text-white">
                     <li>
                         <a href="#relative" class="nav-link"
                             class="text-white transition duration-300 ease-in-out transform hover:scale-105 hover:text-pink-500 border-b-2 border-transparent font-semibold">Home</a>
@@ -212,7 +260,7 @@
                             class="text-white transition duration-300 ease-in-out transform hover:scale-105 hover:text-pink-500 border-b-2 border-transparent font-semibold">Booking</a>
                     </li>
                     <li>
-                        <a onclick="window.location.href='blog.html'" class="nav-link text-white transition duration-300 ease-in-out transform hover:scale-105 hover:text-pink-500 border-b-2 border-transparent font-semibold">
+                        <a href="#Blog" class="nav-link text-white transition duration-300 ease-in-out transform hover:scale-105 hover:text-pink-500 border-b-2 border-transparent font-semibold">
                             Blog
                         </a>
                                             </li>
@@ -250,7 +298,7 @@
                         <div class="w-3/4 lg:w-auto mx-auto lg:mx-0 mt-8 md:mt-2 lg:mt-2 lg:mr-16 lg:ml-12 ml-12 md:ml-14 h-2/4 md:h-3/4 lg:h-3.5/4 absolute inset-0 border-b-0 border-r-8 border-l-8 border-t-8 border border-transparent hover:border transition-all duration-300"
                             style="border-color: rgb(248, 254, 92);"></div>
 
-                        <img src="image/hom-removebg-preview.png" alt="Keerthiba Artistry Bridal Image"
+                        <img src="image/Keerthiba_Artistry_Profile.png" alt="Keerthiba Artistry Bridal Image"
                             class="w-auto lg:w-auto lg:h-2/4 lg:mr-4 lg:mt-0 md:w-auto transition-transform duration-300 transform hover:scale-105">
                     </div>
                 </div>
@@ -329,58 +377,130 @@
         </div>
     </section>
 
-    <!-- Explore Section -->
-    <section id="explore-us">
-        <div class="container mx-auto lg:py-10">
-            <div>
-                <h2 class="text-white text-3xl text-center">BLOG POSTS</h2>
-                <p class="text-yellow-400 text-center">READ MY LATEST POSTS</p>
-            </div>
+   
+
+
+    <section id="Blog" class="bg-black font-sans leading-normal tracking-normal" >
+        <div class="flex justify-center items-center">
+          <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+          <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
+            <!-- Heading Section -->
+          <div class="text-center">
+            <h2 class="text-white text-3xl font-bold">Blog</h2>
+            <p class="text-yellow-400">Explore The World of Keerthi</p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Image 1 -->
-            <div class="relative overflow-hidden group" data-aos="zoom-in-up">
-                <img src="image/keerthy's first makeup.jpg" alt="keerthiba artistry makeup image"
-                    class="w-full h-auto transition-transform duration-300 transform scale-100 group-hover:scale-105">
-                <div
-                    class="overlay absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h1 class="text-2xl text-yellow-400 text-center mb-4">First Client Best Memories</h1>
-                    <p class="text-lg text-white text-center">Embarking on this journey together as your makeup artist
-                        for your special day fills me with excitement and gratitude. Your trust in my craft is truly
-                        cherished, and I'm committed to making your first experience with my makeup services a memorable
-                        and beautiful one.</p>
+      
+            <div class="lg:flex items-stretch md:mt-12 mt-8">
+              <div class="lg:w-1/2">
+                <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 " data-aos="fade-up">
+                  <div class="sm:w-1/2 relative">
+                    <div>
+                      <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">09 Sep 2023</p>
+                      <div class="absolute bottom-0 left-0 p-6">
+                        <h2 class="text-xl font-semibold 5 text-white">Art of Saree Draping with Elegance Redefined</h2>
+                        <p class="text-base leading-4 text-white mt-2">Discover the Timeless Beauty of Saree Draping</p>
+                        <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                          <p onclick="window.location.href='#'"   class="pr-2 text-sm font-medium leading-none">Read More</p>
+                          <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <img src="https://img.freepik.com/premium-photo/traditional-stylish-indian-dress-with-unique-embroidery-design-presenting-fashion-with-culture_919955-21146.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid"  alt="chair" />
+                  </div>
+                  <div class="sm:w-1/2 sm:mt-0 mt-4 relative">
+                    <div>
+                      <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">09 Sep 2023</p>
+                      <div class="absolute bottom-0 left-0 p-6">
+                        <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                        <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                        <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                          <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                          <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <img src="https://img.freepik.com/premium-photo/christmas-decorative-make-up-cosmetics_82893-19776.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" class="w-full " alt="wall design" />
+                  </div>
                 </div>
-            </div>
-            <!-- Image 2 -->
-            <div class="relative overflow-hidden group" data-aos="zoom-in-up">
-                <img src="image/kee_1st.jpg" alt="keerthi's friend function"
-                    class="w-full h-auto transition-transform duration-300 transform scale-100 group-hover:scale-105">
-                <div
-                    class="overlay absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h1 class="text-2xl text-yellow-400 text-center mb-4">Friend Became a Client</h1>
-                    <p class="text-lg text-white text-center">It's an absolute joy to welcome you as my client! Creating
-                        magical transformations and unforgettable memories. Your trust means the world to me, and I'm
-                        thrilled to enhance your natural beauty and confidence.</p>
-
+                <div class="relative" data-aos="fade-up">
+                  <div>
+                    <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">09 Sep 2024</p>
+                    <div class="absolute bottom-0 left-0 md:p-10 p-6">
+                      <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                      <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                      <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                        <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                        <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img src="https://media.istockphoto.com/id/1269854822/photo/asian-female-makeup-artist-applying-makeup-on-woman-face.jpg?s=612x612&w=0&k=20&c=FQdIxbJPofaccD-4RrWbEwJ_BfRYDUYB96neNiKgo-w=" alt="sitting place" class="w-full mt-8 md:mt-6 hidden sm:block" />
+                  <img class="w-full mt-4 sm:hidden" src="https://media.istockphoto.com/id/946495178/photo/young-adult-woman-vlogging-about-cosmetics-skin-care-products.jpg?s=612x612&w=0&k=20&c=0k18YmBkBPKK-V4WSg_aGRJkiQ_r9RPYhEskKK5wMmY=" alt="sitting place" />
                 </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="relative overflow-hidden group" data-aos="zoom-in-up">
-                <img src="image/keerthy_photoshoot.png" alt="Keerthiba Artistry Photoshoot"
-                    class="w-full h-auto transition-transform duration-300 transform scale-100 group-hover:scale-105">
-                <div
-                    class="overlay absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h1 class="text-2xl text-yellow-400 text-center mb-4">Makeup Shots</h1>
-                    <p class="text-lg text-white text-center">Indulge in the mesmerizing world of makeup artistry, where
-                        every brush stroke tells a unique story. Our makeup shots are not just about cosmetics; they're
-                        about empowerment, self-expression, and celebrating individuality.</p>
-
+              </div>
+              <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between">
+                <div class="relative" data-aos="fade-up">
+                  <div>
+                    <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April 2021</p>
+                    <div class="absolute bottom-0 left-0 md:p-10 p-6">
+                      <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                      <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                      <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                        <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                        <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img src="https://media.istockphoto.com/id/2155030819/photo/makeup-artist-preparing-false-eyelashes-for-a-client-in-a-beauty-salon.jpg?s=612x612&w=0&k=20&c=dlXJm3SSxsXM92USFgRsfb1-96KHXAZmbgA32nu5Xq4=" alt="sitting place" class="w-full sm:block hidden" />
+                  <img class="w-full sm:hidden" src="https://img.freepik.com/premium-photo/traditional-stylish-indian-dress-with-unique-embroidery-design-presenting-fashion-with-culture_919955-21146.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" alt="sitting place" />
                 </div>
+                <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
+                  <div class="relative w-full" data-aos="fade-up">
+                    <div>
+                      <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April 2021</p>
+                      <div class="absolute bottom-0 left-0 p-6">
+                        <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                        <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                        <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                          <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                          <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <img src="image/First Client.png" class="w-full" alt="chair" />
+                  </div>
+                  <div class="relative w-full sm:mt-0 mt-4" data-aos="fade-up">
+                    <div>
+                      <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April 2021</p>
+                      <div class="absolute bottom-0 left-0 p-6">
+                        <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                        <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                        <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                          <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                          <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <img src="https://img.freepik.com/free-photo/authentic-indian-wedding-bracelets-colored-hands-by-henna_8353-9770.jpg?ga=GA1.1.1197493033.1718601955&semt=ais_hybrid" class="w-full" alt="wall design" />
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+        </div>  
+      </section>
 
     <!-- Aboot Me -->
 
