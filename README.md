@@ -26,7 +26,7 @@ This website is engineered for maximum organic search dominance on Google & Sear
 - **Technical SEO Assets**:
   - `sitemap.xml` with image extensions and change frequencies
   - `robots.txt` disallowing hidden directories and pointing to the sitemap
-  - `CNAME` for custom domain binding (`keerthibaartistry.life`)
+  - `CNAME` for custom domain binding (`keerthibaartistry.web.app`)
   - Open Graph & Twitter Card tags for social media link previews
 
 ---

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /private/
 Disallow: /.git/
 
-Sitemap: https://keerthibaartistry.life/sitemap.xml
+Sitemap: https://keerthibaartistry.web.app/sitemap.xml
