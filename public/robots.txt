@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /.git/
+
+Sitemap: https://keerthibaartistry.life/sitemap.xml
