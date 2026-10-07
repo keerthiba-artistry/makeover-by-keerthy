@@ -181,26 +181,19 @@
             <!-- Center: Navigation Links -->
             <nav class="hidden lg:block mx-auto">
                 <ul class="flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-gray-800">
-                    <li><a href="#relative"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">Home</a>
+                    <li><a href="#relative" class="nav-link hover:text-amber-700 transition-colors py-1">Home</a>
                     </li>
-                    <li><a href="#about_us"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">Expertise</a>
+                    <li><a href="#about_us" class="nav-link hover:text-amber-700 transition-colors py-1">Expertise</a>
                     </li>
-                    <li><a href="#portfolio"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">Portfolio</a>
+                    <li><a href="#portfolio" class="nav-link hover:text-amber-700 transition-colors py-1">Portfolio</a>
                     </li>
-                    <li><a href="#about-me"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">Founder</a>
+                    <li><a href="#about-me" class="nav-link hover:text-amber-700 transition-colors py-1">Founder</a>
                     </li>
-                    <li><a href="#faq"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">FAQ</a>
+                    <li><a href="#faq" class="nav-link hover:text-amber-700 transition-colors py-1">FAQ</a>
                     </li>
-                    <li><a href="#Blog"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">Journal</a>
+                    <li><a href="#Blog" class="nav-link hover:text-amber-700 transition-colors py-1">Journal</a>
                     </li>
-                    <li><a href="#booking_us"
-                            class="hover:text-amber-700 transition-colors py-1 border-b-2 border-transparent hover:border-amber-600">Booking</a>
+                    <li><a href="#booking_us" class="nav-link hover:text-amber-700 transition-colors py-1">Booking</a>
                     </li>
                 </ul>
             </nav>
@@ -358,9 +351,9 @@
             </div> -->
 
             <div class="container mx-auto px-4 sm:px-8 relative z-10">
-                <div class="grid lg:grid-cols-10 gap-6 lg:gap-10 items-center">
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-                    <!-- Left Hero Content (70%) -->
+                    <!-- Left Hero Content (58% width) -->
                     <div class="lg:col-span-7">
                         <!-- <div
                             class="hero-stagger-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold uppercase tracking-widest mb-6 shadow-sm">
@@ -420,26 +413,47 @@
                         </div>
                     </div>
 
-                    <!-- Right Hero Image (30%) — Gold L-border (top + left only) -->
-                    <div class="lg:col-span-3 relative hero-stagger-3">
-                        <div class="relative">
-                            <!-- Gold L-shaped border accent (top + left) -->
+                    <!-- Right Hero Image (Enlarged Transparent Cutout PNG touching bottom of home screen) -->
+                    <div
+                        class="lg:col-span-5 relative hero-stagger-3 mt-8 lg:mt-0 flex items-end justify-center self-end">
+                        <div
+                            class="gold-glow-wrapper relative w-full max-w-md lg:max-w-none flex items-end justify-center">
+
+                            <!-- Luminous Glow behind cutout -->
                             <div
-                                class="absolute -top-3 -left-3 w-[60%] h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-transparent rounded-full">
-                            </div>
-                            <div
-                                class="absolute -top-3 -left-3 w-1 h-[60%] bg-gradient-to-b from-amber-600 via-amber-400 to-transparent rounded-full">
+                                class="absolute inset-0 m-auto w-[360px] h-[360px] sm:w-[460px] sm:h-[460px] rounded-full bg-gradient-to-tr from-pink-500/50 via-pink-800 to-pink-400/40 blur-3xl animate-pulse pointer-events-none">
                             </div>
 
-                            <img src="image/home_img.png" alt="Best Bridal Makeup Artist Chennai - Keerthiba Artistry"
-                                class="w-full h-[420px] object-cover object-top rounded-2xl hover:scale-[1.02] transition-transform duration-700">
+                            <!-- Spinning Dashed Accent Rings behind cutout -->
+                            <!-- <div class="absolute inset-0 m-auto w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full border-2 border-dashed border-amber-400/60 pointer-events-none animate-spin-slow opacity-75"></div>
+                            <div class="absolute inset-0 m-auto w-[360px] h-[360px] sm:w-[460px] sm:h-[460px] rounded-full border border-amber-300/40 pointer-events-none animate-spin-slow opacity-50" style="animation-direction: reverse; animation-duration: 34s;"></div> -->
+
+                            <!-- Transparent PNG Cutout of Bridal Model/Artist -->
+                            <img src="image/hom-removebg-preview.png"
+                                alt="Makeover by Keerthy - Best Bridal Transformation Chennai"
+                                class="relative z-10 w-full h-[580px] sm:h-[680px] lg:h-[760px] xl:h-[840px] max-h-[88vh] object-contain object-bottom gold-cutout-glow">
+
+                            <!-- Floating Glass Badge Overlay -->
+                            <!-- <div class="absolute bottom-4 right-2 sm:right-6 z-20 p-3 sm:p-3.5 rounded-2xl bg-white/90 backdrop-blur-md border border-amber-300/60 shadow-2xl flex items-center gap-3 animate-float-slow">
+                                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-yellow-400 to-amber-600 flex items-center justify-center text-black font-bold text-base shadow-md">
+                                    <i class="fa-solid fa-crown text-amber-950"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] font-extrabold text-amber-800 uppercase tracking-widest">Master Bridal Stylist</span>
+                                    <span class="block text-xs font-serif font-bold text-gray-900 tracking-wide">Keerthiba Sathiyaa</span>
+                                </div>
+                            </div> -->
+
                         </div>
                     </div>
 
                 </div>
+                
             </div>
 
-            <!-- Bottom Static SVG Wave Divider -->
+        
+        </section>
+    <!-- Bottom Static SVG Wave Divider -->
             <div class="absolute bottom-0 inset-x-0 leading-none z-20 pointer-events-none">
                 <svg class="relative block w-full h-20 sm:h-28" viewBox="0 0 1440 120" preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -447,8 +461,6 @@
                     </path>
                 </svg>
             </div>
-        </section>
-
         <!-- Services / Expertise Section -->
         <section id="about_us" class="py-24 relative bg-[#faf9f6]">
             <div class="container mx-auto px-4 sm:px-8">
@@ -632,7 +644,7 @@
                     <!-- Item 1: Saree & Hair (Tall) -->
                     <div class="collage-item portfolio-item bridal hairstyle cursor-pointer border border-amber-100 shadow-md"
                         data-aos="fade-up"
-                        onclick="openLightbox('image/Screenshot_20240408-165829.png', 'Bridal Luxury Saree & Hair Transformation')">
+                        onclick="openLightbox('image/Screenshot_20260408-165829.png', 'Bridal Luxury Saree & Hair Transformation')">
                         <img src="image/Screenshot_20240408-165829.png" alt="Bridal Saree & Hairstyle"
                             class="w-full h-96 object-cover hover:scale-105 transition-transform duration-700">
                         <div class="collage-overlay">
@@ -840,7 +852,7 @@
                         <!-- Availability Status Pill -->
                         <!-- <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold mb-4">
                             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                            <span>Currently Accepting Muhurtham 2024-2025 Reservations</span>
+                            <span>Currently Accepting Muhurtham 2026-2025 Reservations</span>
                         </div> -->
 
                         <!-- Main Heading & Bio -->
@@ -992,7 +1004,7 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div
                                 class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-amber-800 uppercase shadow-sm">
-                                09 Sep 2024
+                                09 Sep 2026
                             </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -1020,7 +1032,7 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div
                                 class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-amber-800 uppercase shadow-sm">
-                                11 Feb 2024
+                                11 Feb 2026
                             </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -1048,7 +1060,7 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div
                                 class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-amber-800 uppercase shadow-sm">
-                                15 Aug 2024
+                                15 Aug 2026
                             </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -1581,14 +1593,58 @@
                 }
             });
 
-            // Smooth Scroll helper
+            // Professional Smooth Animated Scroll with Sticky Header Offset & ScrollSpy
             function scrollToSection(sectionId) {
-                const targetSection = document.getElementById(sectionId);
+                const cleanId = String(sectionId).replace('#', '');
+                const targetSection = document.getElementById(cleanId);
                 if (targetSection) {
                     closeMobileMenu();
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 80;
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
                 }
             }
+
+            // Global Anchor Smooth Scroll & ScrollSpy Active Nav Highlight
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        const targetId = this.getAttribute('href');
+                        if (targetId && targetId !== '#') {
+                            e.preventDefault();
+                            scrollToSection(targetId);
+                        }
+                    });
+                });
+
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+
+                window.addEventListener('scroll', () => {
+                    let currentSection = '';
+                    const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - headerHeight - 120;
+                        const sectionHeight = section.offsetHeight;
+                        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                            currentSection = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active', 'text-amber-700', 'font-bold');
+                        if (link.getAttribute('href') === `#${currentSection}`) {
+                            link.classList.add('active', 'text-amber-700', 'font-bold');
+                        }
+                    });
+                }, { passive: true });
+            });
 
             // Portfolio Filter Tabs logic
             const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
